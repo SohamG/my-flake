@@ -1,0 +1,9 @@
+* Nix OCS URL
+
+A simple Nix Flake to provide a derivation for ocs-url, the technology used by gnome/kde-store and more.
+
+Adds handling for ocs:// URLs.
+
+* License
+
+MIT
