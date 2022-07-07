@@ -1,8 +1,7 @@
-* Nix OCS URL
+* My Flake
 
-A simple Nix Flake to provide a derivation for ocs-url, the technology used by gnome/kde-store and more.
+A simple Nix Flake I use to package applications for personal consumption (and hopefuly someday upstream to nixpkgs).
 
-Adds handling for ocs:// URLs.
 
 * License
 
