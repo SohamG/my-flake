@@ -13,7 +13,9 @@
 
       };
 
-      nixosModules.default = import ./modules/realmd.nix { };
+      nixosModules.myflake = import ./modules/realmd.nix;
+
+      devShell.x86_64-linux = pkgs.mkShell { };
     };
 }
 

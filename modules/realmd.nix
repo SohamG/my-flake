@@ -4,7 +4,7 @@ with lib;
 
 let
   pkg = pkgs.realmd;
-  cfg = myflake.realmd;
+  cfg = config.myflake.realmd;
 in
 {
   options.myflake.realmd = {
