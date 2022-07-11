@@ -12,6 +12,8 @@
         realmd = import ./packages/realmd.nix { inherit pkgs; };
 
       };
+
+      nixosModules.default = import ./modules/realmd.nix { };
     };
 }
 

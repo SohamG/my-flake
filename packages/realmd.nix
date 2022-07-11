@@ -1,6 +1,8 @@
-{ pkgs, ... }:
+{ pkgs, lib, ...}:
 
-pkgs.stdenv.mkDerivation {
+with pkgs;
+with lib;
+stdenv.mkDerivation rec {
 
   name = "realmd";
   version = "0.16.3";
@@ -11,10 +13,9 @@ pkgs.stdenv.mkDerivation {
     sha256 = "1zknqm7j3dnwkwrpnshc0ya8z0sc4qjs11qa4qnw84wyhx19fp1g";
   };
 
-  buildInputs = with pkgs; [
-    openldap.dev
+  buildInputs = [
+    openldap
     libkrb5
-    packagekit
     polkit
     libxslt
     intltool
@@ -26,6 +27,7 @@ pkgs.stdenv.mkDerivation {
   configureFlags = [
     "--with-distro=redhat"
     "--disable-doc"
-    "--with-systemd-unit-dir=$out/lib/systemd"
+    "--sysconfdir=$out/etc"
+    "--without-systemd-unit-dir"
   ];
 }
